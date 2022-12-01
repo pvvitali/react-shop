@@ -11,11 +11,11 @@ body {
     padding: 0 2.5rem;
   }
   
-  .content {
+  .content{
     min-height: calc(100vh - 64px - 248px);
   }
   
-  .movies {
+  .goods {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
@@ -28,4 +28,95 @@ body {
   
   .radio {
     margin-left: 150px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-content {
+    flex-grow: 1;
+  }
+
+
+  .shopping-cart {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+    cursor: pointer;
+    z-index: 5;
+    padding: 10px;
+  }
+
+  @media (min-width: 767px) {
+    .shopping-cart {
+      top: 5rem;
+      bottom: unset;
+    }
+  }
+
+  /* .cart-quantity {
+
+  } */
+
+  .basket-list {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #fff;
+    width: 50rem;
+    max-width: 95%;
+
+    box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px #0b305b,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+    animation: show 500ms ease-in-out;
+  }
+
+  .button-close {
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.2rem;
+  }
+
+  .clear-icon {
+    cursor: pointer;
+  }
+
+  @keyframes show {
+    from {
+      top: 70%;
+      opacity: 0;
+    }
+    to {
+      top:50%;
+      opacity: 1;
+    }
+  }
+
+
+  .button-quantity {
+    margin: 0px 30px 10px 0px;
+    
+  }
+
+  #toast-container {
+    top: 2rem !important;
+    animation: fade-in 500ms ease-in-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
   }
